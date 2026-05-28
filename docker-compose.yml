@@ -9,7 +9,7 @@ services:
       - TZ=Europe/Paris
       - PYTHONUNBUFFERED=1
       - SCPITCH_PORT=47823
-      - SCBPM_TOKEN=melon-scbpm
+      - SCBPM_TOKEN=${SCBPM_TOKEN}
     volumes:
       - ./frontend:/app/frontend:ro
       - ./backend:/app/backend:ro
