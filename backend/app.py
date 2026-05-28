@@ -187,5 +187,5 @@ def serve_frontend(path):
     return send_from_directory(FRONTEND_DIR, "index.html")
 
 if __name__ == "__main__":
-    port = int(os.environ.get("SCPITCH_PORT", 47823))
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port, debug=False)

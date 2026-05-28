@@ -30,5 +30,5 @@ RUN chmod +x /entrypoint.sh
 
 RUN mkdir -p /app/cache
 
-EXPOSE 47823
+EXPOSE 10000
 ENTRYPOINT ["/entrypoint.sh"]
