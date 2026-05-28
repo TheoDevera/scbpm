@@ -25,6 +25,8 @@ RUN pip install --no-cache-dir -r requirements.txt && \
     CC=/tmp/gcc-wrap pip install --no-build-isolation /tmp/aubio-0.4.9/ && \
     rm -rf /tmp/aubio-sdist /tmp/aubio-0.4.9 /tmp/gcc-wrap
 
+COPY backend/ /app/backend/
+COPY frontend/ /app/frontend/
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
