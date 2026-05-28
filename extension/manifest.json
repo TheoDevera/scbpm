@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "SC BPM",
+  "short_name": "SC BPM",
+  "version": "1.0.0",
+  "description": "Ouvre un track SoundCloud dans SC BPM en un clic",
+  "permissions": ["activeTab", "contextMenus", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["*://soundcloud.com/*", "*://www.soundcloud.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

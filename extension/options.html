@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 420px;
+      padding: 28px;
+      background: #0f0f0f;
+      color: #eee;
+      font-family: system-ui, sans-serif;
+    }
+    h2 { color: #ff5500; margin-bottom: 20px; }
+    label { display: block; margin-bottom: 8px; color: #aaa; font-size: .85rem; }
+    input[type=url] {
+      width: 100%;
+      background: #1a1a1a;
+      border: 1.5px solid #333;
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #eee;
+      font-size: .95rem;
+      outline: none;
+    }
+    input[type=url]:focus { border-color: #ff5500; }
+    button {
+      margin-top: 16px;
+      background: #ff5500;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    button:hover { opacity: .85; }
+    .saved { color: #4caf50; font-size: .85rem; margin-top: 10px; display: none; }
+  </style>
+</head>
+<body>
+  <h2>SC BPM — Paramètres</h2>
+  <label>URL de l'application SC BPM :</label>
+  <input type="url" id="app-url" placeholder="http://localhost:47823">
+  <button id="save-btn">Enregistrer</button>
+  <p class="saved" id="saved-msg">Enregistré ✓</p>
+  <script src="options.js"></script>
+</body>
+</html>

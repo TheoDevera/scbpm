@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SC BPM</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff5500">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>SC<span>BPM</span></h1>
+    </header>
+
+    <form id="url-form">
+      <input
+        type="url"
+        id="url-input"
+        placeholder="URL SoundCloud…"
+        autocomplete="off"
+        inputmode="url"
+      >
+      <button type="submit" id="load-btn">▶</button>
+    </form>
+
+    <div id="status" class="hidden"></div>
+
+    <section id="player" class="hidden">
+      <div id="meta">
+        <img id="thumb" src="" alt="">
+        <div id="track-title"></div>
+      </div>
+
+      <div id="audio-wrap">
+        <audio id="audio" controls preload="metadata"></audio>
+        <div id="audio-loading" class="hidden">
+          <div class="spinner"></div> Chargement…
+        </div>
+      </div>
+
+      <div id="controls">
+        <div class="ctrl-row">
+          <span class="ctrl-label">BPM</span>
+          <span id="bpm-display" class="ctrl-value bpm-val"><span class="spinner-sm"></span></span>
+          <span class="ctrl-arrow hidden" id="bpm-arrow">→</span>
+          <input type="number" id="bpm-target" class="bpm-input" step="1" disabled>
+        </div>
+        <div class="ctrl-row">
+          <span class="ctrl-label">±</span>
+          <input type="range" id="bpm-slider" min="-20" max="20" step="1" value="0" disabled>
+          <span id="bpm-offset-val" class="ctrl-value offset-val">0</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

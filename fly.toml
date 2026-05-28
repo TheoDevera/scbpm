@@ -1,0 +1,21 @@
+app = "sc-bpm"
+primary_region = "cdg"
+
+[build]
+
+[env]
+  SCPITCH_PORT    = "47823"
+  TZ              = "Europe/Paris"
+  PYTHONUNBUFFERED = "1"
+
+[http_service]
+  internal_port        = 47823
+  force_https          = true
+  auto_stop_machines   = "stop"
+  auto_start_machines  = true
+  min_machines_running = 1
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus     = 1
+  memory   = "512mb"

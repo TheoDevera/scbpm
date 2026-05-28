@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 280px;
+      padding: 18px;
+      background: #0f0f0f;
+      color: #eee;
+      font-family: system-ui, sans-serif;
+    }
+    h2 { color: #ff5500; font-size: 1.2rem; margin-bottom: 14px; }
+    .track-url {
+      font-size: .72rem;
+      color: #666;
+      word-break: break-all;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    button {
+      width: 100%;
+      background: #ff5500;
+      color: #fff;
+      border: none;
+      padding: 11px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: .95rem;
+      font-weight: 700;
+    }
+    button:hover { opacity: .85; }
+    .hint { color: #555; font-size: .82rem; line-height: 1.4; }
+    a.settings { display: block; margin-top: 12px; color: #444; font-size: .75rem; text-align: right; cursor: pointer; text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h2>SC BPM</h2>
+  <div id="content"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
